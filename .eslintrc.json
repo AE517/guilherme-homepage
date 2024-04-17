@@ -1,0 +1,12 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": ["nuxt"],
+  "extends": ["prettier", "eslint-recommended", "@nuxt/eslint-config", "plugin:prettier/recommended"],
+  "rules": {
+    "import/first": "off"
+  }
+}

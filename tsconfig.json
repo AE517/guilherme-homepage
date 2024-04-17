@@ -1,4 +1,44 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "lib": [
+      "ESNext",
+      "ESNext.AsyncIterable",
+      "DOM"
+    ],
+    "types": [
+      "@nuxt/types",
+      "@nuxt/typescript-build",
+      "@types/node"
+    ],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": ["*.ts", "*.tsx", "*.vue"],
+  "exclude": [
+    "node_modules"
+  ],
   "extends": "./.nuxt/tsconfig.json"
 }
