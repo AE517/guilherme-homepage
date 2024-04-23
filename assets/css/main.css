@@ -15,6 +15,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
+    color: #f7f9f9;
   }
 
   body {
