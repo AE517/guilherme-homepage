@@ -1,99 +1,97 @@
 <template>
-  <div>
+  <div class="h-full">
     <div
-      class="wrapper xl:grid-rows-[repeat(5, 250px)] grid h-full auto-rows-auto grid-cols-2 justify-items-center gap-x-8 gap-y-6 border-2 border-black p-2 sm:grid-rows-[repeat(5,150px)] md:grid-cols-[repeat(auto-fill,minmax(150px,1fr))] md:gap-x-4 xl:grid-cols-7"
+      class="wrapper grid size-full grid-cols-1 gap-5 p-3 font-poppins sm:grid-cols-2 md:grid-cols-3 md:grid-rows-[repeat(3,250px)] lg:grid-cols-4 xl:grid-cols-5"
     >
-      <div id="logo" class="col-span-2 md:col-span-1">
-        <img src="/G.svg" alt="guilherme-araujo-logo" class="m-auto size-[155px]" />
-      </div>
-      <div
-        id="greet"
-        class="align-center col-span-2 flex w-full flex-col justify-center gap-y-2 p-2 text-maui-mist md:p-1 lg:col-start-2 xl:col-span-5"
-      >
-        <h1 class="text-center font-oxanium text-5xl md:text-left">GREETINGS</h1>
-        <h2 class="text-center font-poppins text-3xl md:text-left">I&apos;m Guilherme Araujo</h2>
-        <p class="text-center font-poppins text-xl md:text-left">
-          A <span class="text-sundress">Web</span> Developer and <span class="text-sundress">Pixel Artist</span> based
-          in Brazil
-        </p>
-      </div>
-      <div
-        id="linkedin"
-        :class="baseSquareSize"
-        class="align-center flex items-center justify-center rounded-md bg-[#0076B2] xl:col-start-2 xl:row-start-3"
-      >
-        <a href="https://linkedin.com/in/guilherme-hj-araujo" target="_blank">
-          <Icon name="devicon:linkedin" size="90" />
-        </a>
-      </div>
-      <div
-        id="github"
-        :class="baseSquareSize"
-        class="align-center flex items-center justify-center rounded-md bg-[#f7f9f9] xl:col-start-2 xl:row-start-4"
-      >
-        <a href="https://github.com/guilherme-hja" target="_blank">
-          <Icon name="devicon:github" size="90" />
-        </a>
-      </div>
-      <div
-        id="tech-stack"
-        class="col-span-2 flex size-full flex-col gap-y-4 rounded-md bg-midnight p-4 sm:row-span-full sm:max-lg:justify-evenly sm:max-md:row-span-1 md:col-span-1 md:row-span-5 md:row-start-2 md:row-start-2 xl:row-span-full xl:row-start-2"
-      >
-        <p class="hidden text-center font-oxanium text-4xl lg:block">Stack</p>
-        <div class="logos flex flex-wrap items-center justify-between gap-x-8 gap-y-6 md:flex-col md:gap-y-10">
-          <Icon v-for="logo in stackLogos" :name="`devicon:${logo}`" size="60" />
+      <div id="greet" class="flex flex-col justify-center rounded-2xl bg-midnight p-5 lg:col-span-2">
+        <div id="container" class="ml-4 w-3/4">
+          <h1 class="mb-5 font-oxanium text-2xl lg:text-4xl">
+            Hi, I&apos;m Guilherme Araujo &HorizontalLine;&HorizontalLine;
+          </h1>
+          <p class="text-lg lg:text-xl">
+            A <span class="text-sundress">Web Developer</span> and <span class="text-sundress">Pixel Artist</span> based
+            in Brazil
+          </p>
         </div>
       </div>
-      <div
-        id="on-going"
-        class="col-span-2 rounded-md bg-midnight p-4 text-justify md:row-span-2 md:row-start-2 lg:col-span-3 lg:row-span-full lg:row-start-2"
-      >
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus omnis autem, ea maxime dolorum, quisquam
-        suscipit illo quae doloribus aspernatur ratione unde quam quis laboriosam. Aliquam quo aliquid, nulla reiciendis
-        odio dignissimos vero pariatur numquam. Eligendi soluta cumque nisi corporis! Nobis inventore fuga dolorem velit
-        ducimus. Labore eligendi incidunt eveniet!
+      <div id="logo-self" class="size-full rounded-2xl bg-midnight lg:col-start-1 lg:row-start-2">
+        <div id="logo" class="z-10 flex size-full items-center justify-center rounded-2xl bg-midnight">
+          <img src="/G.svg" alt="guilherme-araujo-logo" class="size-full" />
+        </div>
       </div>
-      <div id="resume" :class="socialsBaseStyle">
-        <Icon name="ri:file-download-fill" size="70" color="#EBCA89" />
-        About me
+      <div id="tech-stack" class="size-full rounded-2xl bg-midnight lg:col-span-2 lg:row-start-2">
+        <div id="container" class="box-border flex size-full flex-col justify-evenly gap-y-5 p-5">
+          <h2 class="text-center text-4xl lg:text-left lg:text-3xl">Stack I use</h2>
+          <div
+            id="stack-items"
+            class="flex flex-wrap justify-evenly gap-10 overflow-scroll lg:justify-start lg:gap-x-20 xl:flex-nowrap"
+          >
+            <div id="box" v-for="logo in stackLogos">
+              <Icon
+                :name="`devicon:${logo}`"
+                size="50"
+                class="size-auto rounded-xl p-2 transition-colors duration-500 hover:bg-dsotm"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="portfolio" :class="socialsBaseStyle">
-        <Icon name="solar:code-2-bold" color="#EBCA89" size="70" />
-        My works
+      <div id="links" class="size-full rounded-2xl">
+        <div
+          id="container"
+          class="flex size-full flex-nowrap items-center gap-5 overflow-x-scroll p-5 lg:flex-wrap lg:justify-center"
+        >
+          <a
+            v-for="item in socials"
+            id="logo"
+            class="rounded-xl border-2 border-sundress p-2"
+            :href="item.link"
+            target="_blank"
+          >
+            <Icon :name="`mdi:${item.name}`" size="50" color="#EBCA89" />
+          </a>
+        </div>
       </div>
-      <div
-        id="deviant"
-        :class="socialsBaseStyle.replace('bg-midnight', 'bg-maui-mist')"
-        class="xl:col-start-2 xl:row-start-2"
-      >
-        <Icon name="mdi:deviantart" size="75" color="#45AD47" />
+      <div id="email" class="size-full rounded-2xl bg-midnight p-5">
+        <div class="container flex size-full flex-wrap items-center justify-center">
+          <h2 class="text-center text-xl">Got any ideas? Let&apos;s connect!</h2>
+          <button class="flex h-auto items-center justify-between gap-x-10 rounded-xl bg-dsotm px-5 py-3">
+            <span class="text-xl text-sundress">Copy email</span>
+            <Icon name="simple-icons:protonmail" size="50" color="#EBCA89" />
+          </button>
+        </div>
       </div>
-      <div
-        id="latest"
-        class="col-span-2 rounded-md bg-midnight p-4 text-justify md:row-span-2 lg:row-span-full lg:row-start-2 xl:col-span-3"
-      >
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus omnis autem, ea maxime dolorum, quisquam
-        suscipit illo quae doloribus aspernatur ratione unde quam quis laboriosam. Aliquam quo aliquid, nulla reiciendis
-        odio dignissimos vero pariatur numquam. Eligendi soluta cumque nisi corporis! Nobis inventore fuga dolorem velit
-        ducimus. Labore eligendi incidunt eveniet!
-      </div>
-      <div
-        id="mail"
-        :class="socialsBaseStyle"
-        class="col-span-1 row-span-1 md:max-lg:row-start-4 xl:col-start-2 xl:row-start-5"
-      >
-        <a href="mailto:guilherme.hjaraujo@proton.me">
-          <Icon name="simple-icons:protonmail" size="75" color="#EBCA89" />
+      <div id="about" class="size-full rounded-2xl bg-midnight p-5">
+        <a href="#" class="flex size-full items-center justify-center gap-x-5">
+          <p class="text-lg lg:text-2xl">A passion for Web and Games that you enjoy...</p>
+          <div class="rounded-full border-2 border-sundress p-2">
+            <Icon name="material-symbols:arrow-insert" size="30" color="#EBCA89" class="rotate-90" />
+          </div>
         </a>
+      </div>
+      <div id="image" v-for="image in images" class="size-full rounded-2xl">
+        <img :src="image" class="size-full rounded-2xl" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import djinn from '~/assets/images/art/Djinn.webp';
+import eeyuh from '~/assets/images/art/Eeyuh.webp';
+import jotunn from '~/assets/images/art/Jotunn.webp';
+import traveller from '~/assets/images/art/Traveller.webp';
+
 const stackLogos: Array<String> = ['vuejs', 'nuxtjs', 'typescript', 'nodejs', 'sass', 'linux'];
-const baseSquareSize: String = 'size-[155px] sm:max-lg:size-[160px]';
-const socialsBaseStyle: String = `flex ${baseSquareSize} flex-col items-center justify-center rounded-md bg-midnight text-maui-mist`;
+const socials: Array<{ name: string; link: string }> = [
+  { name: 'github', link: 'https://github.com/guilherme-hja' },
+  { name: 'linkedin', link: 'https://linkedin.com/in/guilherme-hj-araujo' },
+  { name: 'deviantart', link: 'https://deviantart.com/ae517' },
+  { name: 'instagram', link: 'https://instagram.com/ae517.art' },
+  { name: 'pinterest', link: 'https://pinterest.com/ae_517' },
+];
+
+const images: Array = [djinn, eeyuh, jotunn, traveller];
 </script>
 
 <style scoped></style>
