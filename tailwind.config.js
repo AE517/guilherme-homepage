@@ -20,6 +20,15 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
         oxanium: ['Oxanium', 'sans-serif'],
       },
+      animation: {
+        'scroll-loop': 'scroll-loop 25s linear infinite',
+      },
+      keyframes: {
+        'scroll-loop': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
+      },
     },
   },
   plugins: [],
