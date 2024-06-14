@@ -1,21 +1,16 @@
 <template>
   <div
     id="image"
-    v-for="(image, index) in images"
-    class="size-full rounded-2xl"
-    :class="`animate-delay-${100 * index} animate-${['fade', 'fade-down', 'fade-up', 'fade-left', 'fade-right'][Math.floor(Math.random() * 5)]}`"
+    v-for="(style, index) in animationStyles"
+    class="size-full rounded-lg"
+    :class="`animate-delay-${100 * index} animate-${style}`"
   >
-    <img :src="image" loading="lazy" class="size-full rounded-2xl" />
+    <img :src="`/art/${index + 1}.webp`" loading="lazy" class="size-full rounded-lg" />
   </div>
 </template>
 
 <script setup lang="ts">
-import djinn from '/art/Djinn.webp';
-import eeyuh from '/art/Eeyuh.webp';
-import jotunn from '/art/Jotunn.webp';
-import traveller from '/art/Traveller.webp';
-
-const images: Array<string> = [djinn, eeyuh, jotunn, traveller];
+const animationStyles: Array<string> = ['fade-down', 'fade-up', 'fade-left', 'fade-right'];
 </script>
 
 <style scoped></style>
