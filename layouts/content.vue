@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="wrap justify center grid grid-cols-1 lg:grid-cols-3 p-2">
+    <div class="wrap grid grid-cols-1 justify-center p-2 lg:grid-cols-[70px,_1fr]">
       <NavBar />
       <slot />
     </div>
