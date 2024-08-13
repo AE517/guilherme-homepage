@@ -1,0 +1,20 @@
+{
+  "education": [
+    { "name": "Tech School - IT", "comp_year": 2018, "place": "ETEC Dr. Emilio Hernadez Aguilar - Franco da Rocha" },
+    { "name": "System Analysis Associate Degree", "comp_year": 2025, "place": "Faculdade das Américas - São Paulo" }
+  ],
+  "certifications": [
+    {
+      "name": "Web Design",
+      "comp_year": 2021,
+      "place": "Origamid",
+      "url": "https://www.origamid.com/certificate/61012eb4"
+    },
+    {
+      "name": "Javascript ES6",
+      "comp_year": 2024,
+      "place": "Origamid",
+      "url": "https://www.origamid.com/certificate/be466137"
+    }
+  ]
+}
