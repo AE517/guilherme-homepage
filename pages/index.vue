@@ -31,7 +31,7 @@
         </div>
       </div>
       <div id="links" class="animate-delay-120 animate-fade-right !bg-transparent">
-        <Socials />
+        <Socials size="60"/>
       </div>
       <div id="projects" class="animate-fade-up p-5 animate-delay-300 xl:col-span-2">
         <NuxtLink to="/projects" class="flex size-full flex-col justify-between py-4">

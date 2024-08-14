@@ -1,7 +1,42 @@
 <template>
   <div>
-    <div class="wrapper mt-4 grid p-3 lg:mt-0 lg:grid-cols-2">
-      <section class="whoami">
+    <div class="wrapper mt-4 grid grid-cols-1 gap-y-10 p-3 lg:mt-0 lg:grid-cols-3 lg:gap-x-10">
+      <section id="social" class="align-center flex flex-col gap-y-5 p-2">
+        <section id="profile" class="flex flex-col gap-y-5">
+          <div id="profile-picture">
+            <figure id="picture-image" class="flex justify-center">
+              <img
+                class="aspect-square md:max-lg:size-2/3 sm:max-md:size-3/5"
+                src="/assets/images/profile.webp"
+                alt="Guilherme-profile-picture"
+              />
+            </figure>
+          </div>
+          <!-- <div> -->
+          <!--   <h1 class="text-center font-oxanium text-5xl">GUILHERME ARAUJO</h1> -->
+          <!-- </div> -->
+        </section>
+        <section id="socials" class="flex overflow-x-scroll sm:justify-center">
+          <div>
+            <Socials size="50"/>
+          </div>
+        </section>
+        <section id="interests">
+          <h1 class="my-4 text-5xl font-oxanium text-center">Personal Interests</h1>
+          <div class="flex items-start gap-10 overflow-x-scroll xl:flex-wrap xl:justify-center">
+            <div
+              id="icons"
+              v-for="interest in interests"
+              class="flex flex-col items-center"
+            >
+              <Icon :name="interest.icon" size="50" color="#EBCA89" />
+              <p class="text-center capitalize">{{ interest.name }}</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="whoami col-span-1 md:col-span-2">
         <div class="flex flex-col justify-center gap-y-10">
           <section id="about-me" class="flex flex-col justify-center gap-y-5">
             <h1
@@ -60,7 +95,9 @@
                   <li v-for="cert in certs">
                     <h1 class="text-center text-2xl font-semibold md:text-left">{{ cert.name }}</h1>
                     | {{ cert.comp_year }} at
-                    <a class="font-xl font-semibold uppercase text-sundress" :href="cert.url">{{ cert.place }}</a>
+                      <a class="font-xl font-semibold uppercase text-sundress" :href="cert.url">{{ cert.place }} 
+                      <Icon name="material-symbols:arrow-insert" size="20" color="#EBCA89" class="rotate-90" /> 
+                    </a>
                     <br />
                   </li>
                 </ul>
@@ -70,7 +107,6 @@
           </section>
         </div>
       </section>
-      <section class="social"></section>
     </div>
   </div>
 </template>
@@ -80,6 +116,17 @@ import data from '/assets/educ.json';
 
 const educ = data.education;
 const certs = data.certifications;
+
+const interests: Array<{ icon: string; name: string }> = [
+  { icon: 'mdi:books', name: 'reading' },
+  { icon: 'ion:game-controller', name: 'gaming' },
+  { icon: 'material-symbols:draw', name: 'drawing' },
+  { icon: 'pixelarticons:pixelarticons', name: 'pixel art' },
+  { icon: 'eos-icons:configuration-file', name: 'game moding' },
+  { icon: 'mdi:rice', name: 'linux ricing' },
+  { icon: 'material-symbols:cooking', name: 'cooking' },
+  { icon: 'material-symbols:function', name: 'functional programming' },
+];
 
 definePageMeta({
   layout: 'content',

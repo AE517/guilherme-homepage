@@ -10,12 +10,15 @@
       :href="item.link"
       target="_blank"
     >
-      <Icon :name="`mdi:${item.name}`" size="60" color="#EBCA89" />
+      <Icon :name="`mdi:${item.name}`" :size="props.size" color="#EBCA89" />
     </a>
   </div>
 </template>
 
 <script setup lang="ts">
+
+const props = defineProps(['size'])
+
 const socials: Array<{ name: string; link: string }> = [
   { name: 'github', link: 'https://github.com/guilherme-hja' },
   { name: 'linkedin', link: 'https://linkedin.com/in/guilherme-hj-araujo' },
