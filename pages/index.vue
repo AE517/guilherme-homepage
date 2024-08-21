@@ -7,7 +7,7 @@
       <div id="greet" class="flex animate-fade-up flex-col justify-center p-5 animate-delay-100 lg:col-span-2">
         <NuxtLink to="/about" id="container" class="ml-4 size-full py-12">
           <h1 class="mb-5 font-oxanium text-2xl lg:text-4xl">
-            Hi, I&apos;m Guilherme Araujo
+            Hi, I&apos;m <span @mouseover="switchName" v-html="name"></span>
             <Icon name="material-symbols:arrow-insert" size="25" color="#EBCA89" class="ml-3 rotate-90" />
           </h1>
           <p class="text-lg lg:text-xl xl:text-2xl">
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div id="links" class="animate-delay-120 animate-fade-right !bg-transparent">
-        <Socials size="60"/>
+        <Socials size="60" />
       </div>
       <div id="projects" class="animate-fade-up p-5 animate-delay-300 xl:col-span-2">
         <NuxtLink to="/projects" class="flex size-full flex-col justify-between py-4">
@@ -86,6 +86,11 @@
 import { ref } from 'vue';
 
 const emailLabel = ref<HTMLSpanElement | null>(null);
+const name = ref('Guilherme Araujo');
+
+const switchName = () => {
+  name.value = name.value === 'Guilherme Araujo' ? '&AElig;517' : 'Guilherme Araujo';
+};
 
 const email = () => {
   copyEmail();

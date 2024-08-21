@@ -5,7 +5,11 @@
         <div class="projects-container">
           <header class="my-8 text-center font-oxanium text-6xl font-bold tracking-wider lg:text-7xl">PROJECTS</header>
           <div class="grid size-full grid-cols-1 justify-center gap-3 lg:grid-cols-2">
-            <GithubCard v-for="repo in repositories" :repo="repo" />
+            <GithubCard
+              v-for="(repo, index) in repositories"
+              :repo="repo"
+              :class="`animate-fade-up animate-delay-${100 * index}`"
+            />
           </div>
         </div>
       </section>

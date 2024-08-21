@@ -2,33 +2,29 @@
   <div>
     <div class="wrapper mt-4 grid grid-cols-1 gap-y-10 p-3 lg:mt-0 lg:grid-cols-3 lg:gap-x-10">
       <section id="social" class="align-center flex flex-col gap-y-5 p-2">
-        <section id="profile" class="flex flex-col gap-y-5">
+        <section id="profile" class="flex animate-fade-up flex-col gap-y-5 animate-delay-500">
           <div id="profile-picture">
             <figure id="picture-image" class="flex justify-center">
               <img
-                class="aspect-square md:max-lg:size-2/3 sm:max-md:size-3/5"
+                class="aspect-square rounded-md sm:max-md:size-3/5 md:max-lg:size-2/3"
                 src="/assets/images/profile.webp"
                 alt="Guilherme-profile-picture"
               />
             </figure>
           </div>
-          <!-- <div> -->
-          <!--   <h1 class="text-center font-oxanium text-5xl">GUILHERME ARAUJO</h1> -->
-          <!-- </div> -->
-        </section>
-        <section id="socials" class="flex overflow-x-scroll sm:justify-center">
           <div>
-            <Socials size="50"/>
+            <h1 class="text-center font-oxanium text-5xl">GUILHERME ARAUJO</h1>
           </div>
         </section>
-        <section id="interests">
-          <h1 class="my-4 text-5xl font-oxanium text-center">Personal Interests</h1>
+        <section id="socials" class="flex animate-fade-up overflow-x-scroll animate-delay-[1000ms] sm:justify-center">
+          <div>
+            <Socials size="50" />
+          </div>
+        </section>
+        <section id="interests" class="animate-fade-up animate-delay-[1500ms]">
+          <h1 class="my-4 text-center font-oxanium text-5xl">Personal Interests</h1>
           <div class="flex items-start gap-10 overflow-x-scroll xl:flex-wrap xl:justify-center">
-            <div
-              id="icons"
-              v-for="interest in interests"
-              class="flex flex-col items-center"
-            >
+            <div id="icons" v-for="interest in interests" class="flex flex-col items-center">
               <Icon :name="interest.icon" size="50" color="#EBCA89" />
               <p class="text-center capitalize">{{ interest.name }}</p>
             </div>
@@ -38,13 +34,13 @@
 
       <section class="whoami col-span-1 md:col-span-2">
         <div class="flex flex-col justify-center gap-y-10">
-          <section id="about-me" class="flex flex-col justify-center gap-y-5">
+          <section id="about-me" class="flex animate-fade-left flex-col justify-center gap-y-5 animate-delay-500">
             <h1
               class="border-b-2 border-sundress text-center font-oxanium text-5xl font-semibold uppercase md:w-[300px] lg:text-left lg:capitalize"
             >
               Who am I?
             </h1>
-            <p class="text-justify text-lg">
+            <p class="text-justify text-lg lg:text-xl">
               I&apos;m a <strong class="text-sundress"> Web Developer</strong> and
               <strong class="text-sundress">Pixel Artist</strong> based in Brazil. With a passion for arts, games and
               programming, my goal is to deliver only the most creative solutions to almost any challenge. <br />
@@ -55,11 +51,14 @@
           </section>
           <section id="bio" class="mt-4 flex flex-col justify-center gap-y-5">
             <h1
-              class="border-b-2 border-sundress text-center font-oxanium text-5xl font-semibold uppercase md:w-[300px] lg:text-left lg:capitalize"
+              class="animate-fade-left border-b-2 border-sundress text-center font-oxanium text-5xl font-semibold uppercase animate-delay-1000 md:w-[300px] lg:text-left lg:capitalize"
             >
               Bio
             </h1>
-            <section id="bio-timeline" class="flex flex-col gap-y-5 text-justify text-lg lg:text-xl">
+            <section
+              id="bio-timeline"
+              class="flex animate-fade-left flex-col gap-y-5 text-justify text-lg animate-delay-1000 lg:text-xl"
+            >
               <!-- Bio timeline -->
               <article><strong>2001</strong> &horbar; Born in Promissão, São Paulo - Brazil;</article>
               <article>
@@ -77,7 +76,10 @@
               <article><strong>2023 to present</strong> &horbar; Works as Freelance.</article>
             </section>
             <!-- Bio timeline END -->
-            <section id="education" class="mt-5 flex flex-col justify-center gap-y-5">
+            <section
+              id="education"
+              class="flex animate-fade-left flex-col justify-center gap-y-5 animate-delay-[1500ms]"
+            >
               <!-- Education Section -->
               <h1
                 class="border-b-2 border-sundress text-center font-oxanium text-5xl font-semibold uppercase md:w-[300px] lg:text-left lg:capitalize"
@@ -95,8 +97,9 @@
                   <li v-for="cert in certs">
                     <h1 class="text-center text-2xl font-semibold md:text-left">{{ cert.name }}</h1>
                     | {{ cert.comp_year }} at
-                      <a class="font-xl font-semibold uppercase text-sundress" :href="cert.url">{{ cert.place }} 
-                      <Icon name="material-symbols:arrow-insert" size="20" color="#EBCA89" class="rotate-90" /> 
+                    <a class="font-xl font-semibold uppercase text-sundress" :href="cert.url" target="_blank"
+                      >{{ cert.place }}
+                      <Icon name="material-symbols:arrow-insert" size="20" color="#EBCA89" class="rotate-90" />
                     </a>
                     <br />
                   </li>
