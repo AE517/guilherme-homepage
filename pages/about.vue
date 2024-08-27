@@ -6,7 +6,7 @@
           <div id="profile-picture">
             <figure id="picture-image" class="flex justify-center">
               <img
-                class="aspect-square rounded-md sm:max-md:size-3/5 md:max-lg:size-2/3"
+                class="aspect-square rounded-md transition-all sm:max-lg:size-3/5 lg:size-2/3"
                 src="/assets/images/profile.webp"
                 alt="Guilherme-profile-picture"
               />

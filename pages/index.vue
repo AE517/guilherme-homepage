@@ -47,7 +47,7 @@
           </div>
         </NuxtLink>
       </div>
-      <BentoImages />
+      <BentoImages v-for="index in 4" :source="`/art/${index}.webp`" :index="index" />
       <div id="email" class="animate-fade-right p-5 animate-delay-200 xl:col-start-5">
         <div class="container flex size-full flex-wrap items-center justify-center gap-y-5 md:gap-y-2">
           <h2 class="text-center text-xl">Got any ideas? Let&apos;s connect!</h2>
@@ -64,7 +64,7 @@
         id="about-pixel-art"
         class="animate-delay-600 col-span-full animate-fade-down p-5 md:col-span-2 lg:col-span-full xl:col-span-2 xl:col-start-3 xl:row-start-3"
       >
-        <a href="#" class="flex size-full flex-col justify-evenly py-4 lg:justify-between">
+        <NuxtLink to="/gallery" class="flex size-full flex-col justify-evenly py-4 lg:justify-between">
           <p class="text-lg text-lg opacity-60 md:text-2xl">
             Pixel Art | &AElig;517 <span class="ml-4"> <Icon name="pixelarticons:image-gallery" size="35" /></span>
           </p>
@@ -76,7 +76,7 @@
               <Icon name="pixelarticons:arrow-right" size="25" color="#EBCA89" class="-rotate-45" />
             </div>
           </div>
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </div>

@@ -25,7 +25,7 @@ const routeElements: Array<{
   label: String;
   icon: String;
 }> = [
-  { path: '#', label: 'AE517 Gallery', icon: 'pixelarticons:image-gallery' },
+  { path: '/gallery', label: 'AE517 Gallery', icon: 'pixelarticons:image-gallery' },
   { path: '/about', label: 'About Me page', icon: 'pixelarticons:avatar' },
   { path: '/projects', label: 'Projects page', icon: 'ri:code-box-fill' },
 ];
