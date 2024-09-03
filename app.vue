@@ -1,5 +1,9 @@
 <template>
-  <div>
+  <div class="h-screen">
+    <!-- <div v-if="loading" class="fixed flex justify-center align-center items-center left-0 top-0 h-full w-full bg-dsotm"> -->
+    <!--   <img src="/static/G.svg" alt="G.svg" class="size-1/4" /> -->
+    <!-- </div> -->
+      
     <NuxtLayout>
       <NuxtPage class="size-full p-2" />
     </NuxtLayout>
@@ -7,6 +11,8 @@
 </template>
 
 <script setup lang="ts">
+// import { ref } from 'vue';
+
 useSeoMeta({
   title: 'Guilherme - Homepage',
   ogTitle: 'Guilherme - Homepage',
@@ -18,6 +24,17 @@ useSeoMeta({
   twitterTitle: 'Guilherme Araujo',
   twitterDescription: 'Guilherme Araujo - Web Developer',
   twitterImage: '/G.svg',
-  twitterCard: 'summary',
+  twitterCard: 'Guilherme Araujo\'s Homepage',
 });
+
+// const nuxtApp = useNuxtApp();
+// const loading = ref(false);
+//
+// nuxtApp.hook("page:start", () => {
+//   loading.value = true;
+// });
+// nuxtApp.hook("page:finish", () => {
+//   loading.value = false;
+// })
+
 </script>

@@ -17,6 +17,10 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
     },
+    // layoutTransition: {
+    //   name: 'layout',
+    //   mode: 'out-in',
+    // },
   },
   css: ['~/assets/css/main.css'],
   postcss: {
