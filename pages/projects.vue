@@ -8,7 +8,7 @@
             <GithubCard
               v-for="(repo, index) in repositories"
               :repo="repo"
-              :class="`animate-fade-up animate-delay-${100 * index}`"
+              :class="`animate-fade-up animate-delay-${500 * index}`"
             />
           </div>
         </div>
