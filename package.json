@@ -12,7 +12,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxt/image": "^1.7.0",
+    "@nuxt/image": "^1.8.0",
     "fast-xml-parser": "^4.4.1",
     "nuxt": "^3.11.2",
     "octokit": "^4.0.2",

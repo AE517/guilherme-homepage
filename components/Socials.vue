@@ -9,6 +9,7 @@
       class="rounded-xl border-2 border-sundress p-2"
       :href="item.link"
       target="_blank"
+      :aria-label="item.name"
     >
       <Icon :name="`mdi:${item.name}`" :size="props.size" color="#EBCA89" />
     </a>
@@ -16,8 +17,7 @@
 </template>
 
 <script setup lang="ts">
-
-const props = defineProps(['size'])
+const props = defineProps(['size']);
 
 const socials: Array<{ name: string; link: string }> = [
   { name: 'github', link: 'https://github.com/guilherme-hja' },
