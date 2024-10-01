@@ -21,7 +21,7 @@
         class="animate-delay-50 relative animate-fade-down overflow-hidden lg:col-start-1 lg:row-start-2"
       >
         <div id="logo" class="absolute z-10 flex size-full items-center justify-center bg-midnight">
-          <img src="/G.svg" alt="guilherme-araujo-logo" class="size-full" />
+          <NuxtImg src="/G.svg" loading="lazy" alt="guilherme-araujo-logo" class="size-full" />
         </div>
       </div>
       <div id="tech-stack" class="animate-fade-left animate-delay-200 lg:col-span-2 lg:row-start-2">

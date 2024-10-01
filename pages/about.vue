@@ -5,7 +5,7 @@
         <section id="profile" class="flex animate-fade-up flex-col gap-y-5 animate-delay-500">
           <div id="profile-picture">
             <figure id="picture-image" class="flex justify-center">
-              <img
+              <NuxtImg
                 class="aspect-square rounded-md transition-all sm:max-lg:size-3/5 lg:size-2/3"
                 src="/assets/images/profile.webp"
                 alt="Guilherme-profile-picture"

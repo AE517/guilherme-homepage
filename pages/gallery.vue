@@ -6,7 +6,12 @@
         <div class="flex animate-fade-right flex-col justify-evenly gap-5 animate-delay-[1000ms] lg:flex-row">
           <div id="greet-images" class="flex flex-col gap-5 sm:flex-row">
             <figure>
-              <img class="rounded-md transition-all" loading="lazy" src="/art/1.webp" alt="Facade of Ambitious Ego" />
+              <NuxtImg
+                class="rounded-md transition-all"
+                loading="lazy"
+                src="/art/1.webp"
+                alt="Facade of Ambitious Ego"
+              />
               <figcaption class="mt-1 text-center text-lg font-semibold">
                 Facade of Ambitious Ego -
                 <a
@@ -18,7 +23,12 @@
               </figcaption>
             </figure>
             <figure>
-              <img class="rounded-md transition-all" loading="lazy" src="/art/4.webp" alt="The Eternity Traveller" />
+              <NuxtImg
+                class="rounded-md transition-all"
+                loading="lazy"
+                src="/art/4.webp"
+                alt="The Eternity Traveller"
+              />
               <figcaption class="mt-1 text-center text-lg font-semibold">
                 The Eternity Traveller -
                 <a
@@ -64,23 +74,23 @@
         <section id="gallery-images">
           <div class="flex size-full flex-row flex-wrap justify-evenly gap-5 *:max-w-[320px] *:text-lg">
             <figure>
-              <img class="rounded-md" src="/art/6.webp" alt="Never-Lost Pride - Alf" />
+              <NuxtImg class="rounded-md" src="/art/6.webp" alt="Never-Lost Pride - Alf" />
               <figcaption class="mt-1 text-center font-semibold">Never-Lost Pride - Alf</figcaption>
             </figure>
             <figure>
-              <img class="rounded-md" src="/art/5.webp" alt="Invi" />
+              <NuxtImg class="rounded-md" src="/art/5.webp" alt="Invi" />
               <figcaption class="mt-1 text-center font-semibold">Invi</figcaption>
             </figure>
             <figure>
-              <img class="rounded-md" src="/art/3.webp" alt="Jotunn" />
+              <NuxtImg class="rounded-md" src="/art/3.webp" alt="Jotunn" />
               <figcaption class="mt-1 text-center font-semibold">Memoir of Countless Origins - Jötunn</figcaption>
             </figure>
             <figure>
-              <img class="rounded-md" src="/art/8.webp" alt="Invi" />
+              <NuxtImg class="rounded-md" src="/art/8.webp" alt="Invi" />
               <figcaption class="mt-1 text-center font-semibold">Berand</figcaption>
             </figure>
             <figure>
-              <img class="rounded-md" src="/art/9.webp" alt="Invi" />
+              <NuxtImg class="rounded-md" src="/art/9.webp" alt="Invi" />
               <figcaption class="mt-1 text-center font-semibold">Dumiurgis</figcaption>
             </figure>
           </div>
@@ -88,11 +98,11 @@
         <section id="gallery-animations">
           <div class="flex flex-col justify-center gap-5 lg:flex-row">
             <figure>
-              <img class="rounded-md" src="/art/7.webp" alt="Project SIGNUS" />
+              <NuxtImg class="rounded-md" src="/art/7.webp" alt="Project SIGNUS" />
               <figcaption class="mt-1 text-center font-semibold">Project SIGNUS</figcaption>
             </figure>
             <figure>
-              <img class="rounded-md" src="/art/11.webp" alt="Project SIGNUS" />
+              <NuxtImg class="rounded-md" src="/art/11.webp" alt="Project SIGNUS" />
               <figcaption class="mt-1 text-center font-semibold">
                 <strong>Project SIGNUS</strong> - Hidden Files
               </figcaption>
