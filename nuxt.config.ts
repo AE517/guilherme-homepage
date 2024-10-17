@@ -5,16 +5,11 @@ export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@nuxtjs/mdc', '@nuxt/image'],
-  mdc: {
-    highlight: {
-      theme: 'monokai',
-      langs: ['shellscript'],
-      wrapperStyle: true,
-    },
-  },
+
   image: {
     inject: true
   },
+
   app: {
     head: {
       charset: 'utf-8',
@@ -29,11 +24,15 @@ export default defineNuxtConfig({
     //   mode: 'out-in',
     // },
   },
+
   css: ['~/assets/css/main.css'],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
+  compatibilityDate: '2024-10-17',
 });
