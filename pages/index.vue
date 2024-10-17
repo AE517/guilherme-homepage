@@ -2,7 +2,7 @@
   <div class="h-full">
     <div
       ref="wrapper"
-      class="wrapper grid size-full grid-cols-1 gap-5 p-3 font-poppins *:size-full *:rounded-lg *:bg-midnight sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:grid-rows-[repeat(3,255px)]"
+      class="wrapper grid size-full grid-cols-1 gap-5 p-3 font-poppins *:size-full *:rounded-lg *:bg-midnight sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 xl:content-center xl:grid-rows-[repeat(3,_minmax(255px,_300px))]"
     >
       <div id="greet" class="flex animate-fade-up flex-col justify-center p-5 animate-delay-100 lg:col-span-2">
         <NuxtLink to="/about" id="container" class="ml-4 size-full py-12">

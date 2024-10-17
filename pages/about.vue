@@ -7,7 +7,7 @@
             <figure id="picture-image" class="flex justify-center">
               <NuxtImg
                 class="aspect-square rounded-md transition-all sm:max-lg:size-3/5 lg:size-2/3"
-                src="/assets/images/profile.webp"
+                src="/profile/profile.webp"
                 alt="Guilherme-profile-picture"
               />
             </figure>
@@ -35,11 +35,11 @@
       <section class="whoami col-span-1 md:col-span-2">
         <div class="flex flex-col justify-center gap-y-10">
           <section id="about-me" class="flex animate-fade-left flex-col justify-center gap-y-5 animate-delay-500">
-            <h1
+              <h1
               class="border-b-2 border-sundress text-center font-oxanium text-5xl font-semibold uppercase md:w-[300px] lg:text-left lg:capitalize"
             >
-              Who am I?
-            </h1>
+            Who am I? <a href="/files/curr.pdf" target="_blank" download="guilherme-araujo.pdf"><Icon name="mdi:file-download" color="#EBCA89" size="50" class="mb-2"/></a>
+                  </h1>
             <p class="text-justify text-lg lg:text-xl">
               I&apos;m a <strong class="text-sundress"> Web Developer</strong> and
               <strong class="text-sundress">Pixel Artist</strong> based in Brazil. With a passion for arts, games and
