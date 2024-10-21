@@ -6,7 +6,7 @@ interface Repo {
   name: string;
   url: string;
   description: string;
-  homepage?: string; //Optional
+  homepage?: string; //Optional | On empty returns ''
   language: string;
   topics: Array<object>;
 }
