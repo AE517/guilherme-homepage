@@ -8,7 +8,7 @@
             <GithubCard
               v-for="(repo, index) in repositories"
               :repo="repo"
-              :class="`animate-fade-up animate-delay-${500 * index}`"
+              class="animate-fade-up animate-delay-1000"
             />
           </div>
         </div>
@@ -24,7 +24,7 @@ definePageMeta({
 
 const githubResponse: Array<object> = await githubApi();
 const repositories: Array<object> = githubResponse.filter((item: any) => {
-  if (item.name !== 'Guilherme-HJA') return item;
+  if (item.name !== 'Guilherme-HJA') return item; // Github Config ignore
 });
 </script>
 

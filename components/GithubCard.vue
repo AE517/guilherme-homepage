@@ -20,7 +20,7 @@
               <span><Icon name="mdi:github" size="35" /></span>
             </a>
             <a
-              v-if="repo.homepage !== null"
+              v-if="repo.homepage !== ''"
               :href="repo.homepage"
               target="_blank"
               class="flex flex-row items-center gap-x-2 rounded-lg bg-sundress p-2 px-3 py-2 text-midnight lg:text-lg"
