@@ -2,14 +2,14 @@ import { Octokit } from 'octokit';
 
 const octokit = new Octokit({});
 //Github API returns a large quantity of data, this aims to use only the necessary for the 'projects' page,
-interface Repo {
+export type Repo = {
   name: string;
   url: string;
   description: string;
   homepage?: string; //Optional | On empty returns ''
   language: string;
   topics: Array<object>;
-}
+};
 
 export default async function () {
   const response = await octokit.request('GET /users/{username}/repos', {

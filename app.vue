@@ -3,7 +3,7 @@
     <!-- <div v-if="loading" class="fixed flex justify-center align-center items-center left-0 top-0 h-full w-full bg-dsotm"> -->
     <!--   <img src="/static/G.svg" alt="G.svg" class="size-1/4" /> -->
     <!-- </div> -->
-      
+
     <NuxtLayout>
       <NuxtPage class="size-full p-2" />
     </NuxtLayout>
@@ -24,7 +24,8 @@ useSeoMeta({
   twitterTitle: 'Guilherme Araujo',
   twitterDescription: 'Guilherme Araujo - Web Developer',
   twitterImage: '/G.svg',
-  twitterCard: 'Guilherme Araujo\'s Homepage',
+  twitterCard: "Guilherme Araujo's Homepage",
+  ogUrl: 'guilherme-homepage.pages.dev',
 });
 
 // const nuxtApp = useNuxtApp();
@@ -36,5 +37,4 @@ useSeoMeta({
 // nuxtApp.hook("page:finish", () => {
 //   loading.value = false;
 // })
-
 </script>
