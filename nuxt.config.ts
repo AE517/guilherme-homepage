@@ -3,7 +3,13 @@ import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
   ssr: false,
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@nuxtjs/mdc', '@nuxt/image'],
 
   image: {
