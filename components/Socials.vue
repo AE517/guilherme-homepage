@@ -20,7 +20,7 @@
 const props = defineProps(['size']);
 
 const socials: Array<{ name: string; link: string }> = [
-  { name: 'github', link: 'https://github.com/guilherme-hja' },
+  { name: 'github', link: 'https://github.com/AE517' },
   { name: 'linkedin', link: 'https://linkedin.com/in/guilherme-hj-araujo' },
   { name: 'deviantart', link: 'https://deviantart.com/ae517' },
   { name: 'instagram', link: 'https://instagram.com/ae517.art' },
