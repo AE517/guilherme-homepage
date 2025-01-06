@@ -1,4 +1,4 @@
-import { Octokit } from 'octokit';
+import { Octokit } from "octokit";
 
 const octokit = new Octokit({});
 //Github API returns a large quantity of data, this aims to use only the necessary for the 'projects' page,
@@ -12,14 +12,14 @@ export type Repo = {
 };
 
 export default async function () {
-  const response = await octokit.request('GET /users/{username}/repos', {
-    username: 'guilherme-hja',
+  const response = await octokit.request("GET /users/{username}/repos", {
+    username: "AE517",
     header: {
-      'X-GitHub-Api-Version': '2022-11-28',
+      "X-GitHub-Api-Version": "2022-11-28",
     },
   });
   return response.data.map((repo: any) => {
-    return <Repo>{
+    return <Repo> {
       name: repo.name,
       url: repo.html_url,
       description: repo.description,
