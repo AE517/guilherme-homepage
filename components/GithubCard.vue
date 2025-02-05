@@ -5,9 +5,9 @@
     >
       <header>
         <div
-          class="align-center flex flex-col content-center items-center justify-center gap-y-3 lg:flex-row lg:justify-between"
+          class="align-center flex flex-col content-center items-center justify-center gap-y-3 md:flex-row md:justify-between"
         >
-          <h2 class="mb-2 font-oxanium text-5xl uppercase lg:text-3xl">
+          <h2 class="mb-2 font-oxanium text-4xl text-center uppercase lg:text-3xl">
             {{ repo.name }}
           </h2>
           <div class="flex flex-row justify-between gap-x-4">
@@ -16,16 +16,14 @@
               target="_blank"
               class="flex flex-row items-center gap-x-2 rounded-lg border-2 border-sundress px-3 py-2 text-sundress lg:text-lg"
             >
-              <span>Repository</span>
               <span><Icon name="mdi:github" size="35" /></span>
             </a>
             <a
               v-if="repo.homepage !== ''"
               :href="repo.homepage"
               target="_blank"
-              class="flex flex-row items-center gap-x-2 rounded-lg bg-sundress p-2 px-3 py-2 text-midnight lg:text-lg"
+              class="flex flex-row items-center gap-x-2 rounded-lg border-2 bg-sundress px-4 border-sundress py-2 text-midnight lg:text-lg"
             >
-              <span>Try it out!</span>
               <span><Icon name="material-symbols:arrow-insert" size="25" class="rotate-90" /></span
             ></a>
           </div>
