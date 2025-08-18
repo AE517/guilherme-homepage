@@ -1,8 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { defineNuxtConfig } from 'nuxt/config';
+import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   devtools: {
     enabled: true,
 
@@ -10,19 +10,20 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@nuxtjs/mdc', '@nuxt/image'],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxtjs/mdc", "@nuxt/image"],
 
   image: {
-    inject: true
+    staticFilename: "[public]/images/[name]-[hash][ext]",
+    inject: true,
   },
 
   app: {
     head: {
-      charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1',
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }],
       htmlAttrs: {
-        lang: 'en',
+        lang: "en",
       },
     },
     // layoutTransition: {
@@ -31,7 +32,7 @@ export default defineNuxtConfig({
     // },
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ["~/assets/css/main.css"],
 
   postcss: {
     plugins: {
@@ -40,5 +41,5 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: '2024-10-17',
+  compatibilityDate: "2024-10-17",
 });
