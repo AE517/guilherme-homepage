@@ -69,7 +69,7 @@
                 Emilio Hernandez Aguilar | Franco da Rocha - São Paulo;
               </article>
               <article>
-                <strong>2022</strong> &horbar; Started studying System Analysis at FAM (Graduation expected at 07/2025)
+                <strong>2022</strong> &horbar; Started studying System Analysis at FAM
                 | São Paulo;
               </article>
               <article>
